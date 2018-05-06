@@ -18,11 +18,20 @@
 	    {{ .Page.Content}}
 	</main>
 
-	{{ if .Page.Params.soldout }}
-	<a href="#" class="Content-buy">
-	    Buy: {{ .Page.Params.Price }}
-	</a>
-	{{ end }}
+	<div class="Content-footer">
+	    {{ if .Page.Params.Price }}
+	    <p class="Content-price">
+		Price: {{ .Page.Params.Price }}
+	    </p>
+	    {{ end }}
+	    {{ if .Page.Params.soldout }}
+	    <span class="Content-buy">Soldout</span> 
+	    {{ else }}
+	    <a href="#" class="Content-buy">
+		Order
+	    </a>
+	    {{ end }}
+	</div>
     </div>
 </section>
 

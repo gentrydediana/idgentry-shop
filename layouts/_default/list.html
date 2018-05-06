@@ -3,20 +3,23 @@
 {{ partial "siteheader" . }}
 
 <main class="Layout-body">
-	<section class="Section Container Grid">
-		{{ range .Data.Pages }}
-		{{if eq .Type "projects"}}
-		<article class="Grid-item Card">
-			<a href="{{ .URL }}" class="Card-link">
-				{{if .Params.image}}
-				<img src="{{.Params.image}}" alt="{{.Title}}" class="Card-media">
-				{{end}}
-				<h3 class="Card-title">{{ .Title }}</h3>
-			</a>
-		</article>
+    <section class="Section Container Grid">
+	{{ range .Data.Pages }}
+	{{if eq .Type "projects"}}
+	<article class="Grid-item Card">
+	    <a href="{{ .URL }}" class="Card-link">
+		{{if .Params.image}}
+		<img src="{{.Params.image}}" alt="{{.Title}}" class="Card-media">
+		{{end}}
+		<h3 class="Card-title">{{ .Title }}</h3>
+		{{if .Params.soldout}}
+		<p class="Card-status">Soldout</p>
 		{{ end }}
-		{{ end }}
-	</section>
+	    </a>
+	</article>
+	{{ end }}
+	{{ end }}
+    </section>
 </main>
 
 {{ partial "htmlclose" }}

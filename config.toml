@@ -1,5 +1,5 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Portfolio starter"
+title = "Id-gentry"
 theme = "portfolio-hugo-theme"
 enableGitInfo = "true"

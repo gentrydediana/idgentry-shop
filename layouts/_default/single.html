@@ -7,7 +7,6 @@
     <div class="Content">
 	<header class="Content-header">
 	    <h1 class="Content-title">{{ .Page.Title }}</h1>
-
 	    {{ if .Page.Params.image }}
 	    <figure>
 		<img src="{{ .Page.Params.image }}">
@@ -18,6 +17,12 @@
 	<main class="Content-body">
 	    {{ .Page.Content}}
 	</main>
+
+	{{ if .Page.Params.soldout }}
+	<a href="#" class="Content-buy">
+	    Buy: {{ .Page.Params.Price }}
+	</a>
+	{{ end }}
     </div>
 </section>
 

@@ -1,0 +1,5 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Portfolio starter"
+theme = "portfolio-hugo-theme"
+enableGitInfo = "true"

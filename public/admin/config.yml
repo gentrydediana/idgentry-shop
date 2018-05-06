@@ -1,0 +1,51 @@
+# trying things out just with github gateway
+# but might be necesare to use netify's
+# https://www.netlifycms.org/docs/authentication-backends/
+backend:
+  name: git-gateway
+   # Branch to update (optional; defaults to master)
+  branch: master
+
+# Media files will be stored in the
+# repo under images/uploads
+
+# Media files will be stored in the repo under
+media_folder: "static/medias/uploads"
+# The src attribute for uploaded media will begin with
+public_folder: "/medias/uploads"
+
+collections:
+  - name: "projects" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Projects" # Used in the UI
+    label_singular: "Project" # Used in the UI, ie: "New Post"
+    # The path to the folder where the documents are stored
+    folder: "content/projects"
+    # Allow creating new
+    create: true
+    # Template for new files
+    slug: "{{title}}"
+    editor:
+      preview: false
+    fields:
+    - {label: Title, name: title, widget: string}
+    - {label: Body, name: body, widget: markdown}
+    - {label: "Featured Image", name: image, widget: image, required: false}
+
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    create: true
+    folder: "content/pages"
+    editor:
+      preview: false
+    fields:
+    - {label: Title, name: title, widget: string}
+    - label: "Show in menu"
+      name: "menu"
+      widget: "select"
+      options:
+        - { label: "Yes", value: "main" }
+        - { label: "No", value: "" }
+      default: "main"
+      required: false
+    - {label: Body, name: body, widget: markdown}

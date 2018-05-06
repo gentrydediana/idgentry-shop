@@ -1,0 +1,24 @@
+{{ partial "htmlopen" . }}
+
+{{ partial "siteheader" . }}
+
+<section class="Layout-body">
+
+    <div class="Content">
+	<header class="Content-header">
+	    <h1 class="Content-title">{{ .Page.Title }}</h1>
+
+	    {{ if .Page.Params.image }}
+	    <figure>
+		<img src="{{ .Page.Params.image }}">
+	    </figure>
+	    {{end}}
+	</header>
+
+	<main class="Content-body">
+	    {{ .Page.Content}}
+	</main>
+    </div>
+</section>
+
+{{ partial "htmlclose" }}

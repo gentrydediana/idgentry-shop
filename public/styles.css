@@ -1,0 +1,146 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Native element */
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+a,
+a:visited,
+a:hover {
+    color: black;
+}
+
+p {
+    margin-top: 0;
+}
+
+/* Layout */
+.Layout {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.Layout-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.Layout-header,
+.Layout-body {
+    margin-bottom: 2rem;
+}
+.Layout-footer {
+    text-align: right;
+    font-style: italic;
+}
+.Section {
+    margin-bottom: 2rem;
+}
+
+/* Title */
+.Layout-header h1 {
+	font-size: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Nav */
+.Nav {
+    display-flex;
+}
+.Layout-header h1 a,
+.Nav-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+}
+.Nav-item.is-active {
+    text-decoration: underline;
+}
+.Nav--main {
+    flex-wrap: no-wrap;
+}
+.Nav--main .Nav-item ~ .Nav-item {
+    margin-left: 1rem;
+}
+
+/* Grid */
+
+.Grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.Grid-item {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 40rem) {
+	.Grid-item {
+		width: 25%;
+	}
+}
+
+/* Card */
+
+.Card {
+    padding: 1rem;
+}
+
+.Card-link {
+    display: block;
+    text-decoration: none;
+}
+.Card-media {
+    padding-bottom: 0.8rem;
+}
+.Card img {
+    width: 100%;
+}
+.Card-title {
+    text-align: center;
+    font-weight: normal;
+		font-size: 1em;
+}
+
+/* Content */
+.Content {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Content-header {
+    margin-bottom: 2rem;
+}
+
+.Content h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.Content img {
+    max-width: 100%;
+    max-height: 90vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

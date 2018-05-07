@@ -26,7 +26,7 @@
 	    {{ if .Page.Params.soldout }}
 	    <span class="Content-buy">Soldout</span> 
 	    {{ else }}
-	    <a href="#" class="Content-buy">
+	    <a href="{{ .Page.Params.orderUrl }}" class="Content-buy">
 		Order
 	    </a>
 	    {{ end }}

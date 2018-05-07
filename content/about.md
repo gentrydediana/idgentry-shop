@@ -14,4 +14,4 @@ Each items are unique, handmade in limited editions.
 Collections are inspired by modern urban life and nature.
 
 
-https://www.instagram.com/idgentry/
+[instagram/idgentry](https://www.instagram.com/idgentry/)

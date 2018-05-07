@@ -1,9 +1,9 @@
 body {   
-    font-family: 'Caudex', serif;
+    font-family: 'Source Serif Pro', serif;
 }
 
 .Layout-header {
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .Layout-header h1 {
@@ -27,6 +27,10 @@ body {
     bottom: 0;
 }
 
+.Content h1 {
+    text-align: left;
+    padding-bottom: 0;
+}
 .Content-footer {
     display: flex;
     flex-wrap: wrap;

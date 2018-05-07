@@ -1,5 +1,13 @@
 body {   
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Noto Serif', serif;
+}
+
+
+.Layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .Layout-header {
@@ -15,6 +23,11 @@ body {
 }
 .Nav--main a {
     font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.Grid {
+    justify-content: center;
 }
 
 .Card {
